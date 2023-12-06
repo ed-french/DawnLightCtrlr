@@ -48,7 +48,8 @@ uint32_t time_through_day_s=0;
 uint8_t bank_pios[]={PIN_CHANNEL_0,PIN_CHANNEL_1,PIN_CHANNEL_2,PIN_CHANNEL_3};
 
 
-uint16_t bank_levels[]={0,110,115,120,140,160,190,240,300,1023};
+//uint16_t bank_levels[]={0,110,115,120,140,160,190,240,300,1023};
+uint16_t bank_levels[]=  {0,112,116,124,132,150,210,350,600,1023};
 
 uint16_t g_light_level=0;
 
@@ -156,7 +157,7 @@ void set_light_level(uint16_t value)
     }
     ledcWrite(bank_no,bank_levels[level]);
 
-    //Serial.printf("\tSet bank : %d\tlevel : %d\tRaw : %d\n",bank_no,level,bank_levels[level]);
+    Serial.printf("\tSet bank : %d\tlevel : %d\tRaw : %d\n",bank_no,level,bank_levels[level]);
   }
   //delay(100);
 
