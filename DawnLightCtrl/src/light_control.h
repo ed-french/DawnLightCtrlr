@@ -20,5 +20,6 @@ class LightControl {
     uint32_t _current_raw_outputs[4]={0,0,0,0};
     bool _level_locked=false;
     uint32_t _calc_duty_from_level(float level);
+    
 };
 #endif
